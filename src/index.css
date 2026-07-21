@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-hutan-900;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-tunas-500 ring-offset-2 ring-offset-pasir;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out;
+  }
+  .animate-slide-up {
+    animation: slide-up 0.25s ease-out;
+  }
+  .animate-scale-in {
+    animation: scale-in 0.2s ease-out;
+  }
+  .animate-slide-in-right {
+    animation: slide-in-right 0.25s ease-out;
+  }
+}
+
+@layer components {
+  .btn-primer {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bara-500 px-6 py-3
+      font-display font-semibold text-white shadow-card transition duration-150
+      hover:-translate-y-0.5 hover:bg-bara-600 active:translate-y-0 active:scale-[0.98]
+      disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0;
+  }
+
+  .btn-sekunder {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-hutan-800 px-6 py-3
+      font-display font-semibold text-hutan-800 transition duration-150
+      hover:-translate-y-0.5 hover:bg-hutan-800 hover:text-white active:translate-y-0 active:scale-[0.98]
+      disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0;
+  }
+
+  .kartu {
+    @apply rounded-xl2 border border-tunas-100 bg-white p-6 shadow-card transition duration-150;
+  }
+
+  .label-bagian {
+    @apply inline-block rounded-full bg-tunas-100 px-4 py-1 text-sm font-semibold text-hutan-700;
+  }
+}
