@@ -4,8 +4,5 @@ import react from "@vitejs/plugin-react";
 // Konfigurasi dasar Vite untuk proyek React + Tailwind
 export default defineConfig({
   plugins: [react()],
-  server: {
-    port: 5173,
-    open: true,
-  },
+  base: '/SatyaGraha/',
 });
