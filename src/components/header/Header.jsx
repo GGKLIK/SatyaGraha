@@ -38,7 +38,7 @@ export default function Header({ user, halamanAktif, onNavigasi, onBukaLogin, on
           onClick={() => pilihMenu("beranda")}
           className="flex items-center gap-2.5 font-display text-xl font-extrabold text-hutan-900"
         >
-          <img src="/images/logo-icon.png" alt="Eco Siklus" className="h-10 w-10 object-contain" />
+          <img src="/SatyaGraha/images/logo-icon.png" className="h-10 w-10 object-contain" />
           SatyaGraha
         </button>
 
